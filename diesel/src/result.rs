@@ -91,6 +91,9 @@ pub enum DatabaseErrorKind {
     /// A foreign key constraint was violated.
     ForeignKeyViolation,
 
+    /// A trigger within the database raised and aborted the transaction
+    TriggerFailed,
+
     /// The query could not be sent to the database due to a protocol violation.
     ///
     /// An example of a case where this would occur is if you attempted to send
